@@ -1,84 +1,83 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Page</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+:root {
+    /* Variables CSS personnalisées */
+    --bg-main: rgb(241, 225, 204);
+    --bg-card: #ffffff;
+    --bg-prepa: rgb(251, 235, 244);
+    --color-text: rgb(87, 85, 85);
+    --color-primary: rgb(116, 60, 4);
+    --color-secondary: rgb(106, 36, 76);
+    --font-family-main: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 
-    <!-- Balise sémantique <main> pour la structure principale -->
-    <main class="contener">
+body {
+    background-color: var(--bg-main);
+    min-height: 100vh;
+    font-family: var(--font-family-main);
+}
 
-        <img src="image-omelette.jpeg" alt="Simple Omelette" class="recipe-img">
+.contener {
+    width: min(90%, 45rem);
+    background-color: var(--bg-card);
+    display: block;
+    margin-inline: auto;
+    padding: clamp(1.5rem, 5vw, 3.125rem);
+    border-radius: 1.25rem;
+    margin-block-start: clamp(2rem, 10vw, 9.375rem);
+    margin-block-end: clamp(2rem, 12vw, 12.5rem);
+}
 
-        <h1>Simple Omelette Recipe</h1>
-        <p>An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked to perfection, optionally filled with your choice of cheese, vegetables, or meats.</p>
+.recipe-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-inline: auto;
+    border-radius: 1.25rem;
+}
 
-        <!-- Titre h2 pour respecter la hiérarchie h1 -> h2 -->
-        <section class="prepa">
-            <h2>Preparation time</h2>
-            <ul>
-                <li><strong>Total:</strong> Approximately 10 minutes</li>
-                <li><strong>Preparation:</strong> 5 minutes</li>
-                <li><strong>Cooking:</strong> 5 minutes</li>
-            </ul>
-        </section>
+h1 {
+    font-size: clamp(2rem, 4vw, 3.125rem);
+}
 
-        <section>
-            <h2>Ingredients</h2>
-            <ul>
-                <li>2-3 large eggs</li>
-                <li>Salt, to taste</li>
-                <li>Pepper, to taste</li>
-                <li>1 tablespoon of butter or oil</li>
-                <li>Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
-            </ul>
-        </section>
+h2 {
+    font-size: clamp(1.5rem, 3vw, 2.1875rem);
+    color: var(--color-primary);
+}
 
-        <hr>
+.prepa h2 {
+    color: var(--color-secondary);
+    font-size: clamp(1.125rem, 2vw, 1.25rem);
+}
 
-        <section>
-            <h2>Instructions</h2>
-            <ol>
-                <li><strong>Beat the eggs:</strong> In a bowl, whisk the eggs with a pinch of salt and pepper until they are well mixed. You can add a tablespoon of water or milk for a fluffier texture.</li>
-                <li><strong>Heat the pan:</strong> Place a non-stick frying pan over medium heat and add butter or oil.</li>
-                <li><strong>Cook the omelette:</strong> Pour the eggs into the pan and tilt it so the eggs evenly cover the surface.</li>
-                <li><strong>Add fillings:</strong> When the eggs begin to set at the edges but are still slightly runny in the middle, sprinkle your fillings over one half of the omelette.</li>
-                <li><strong>Fold and serve:</strong> Carefully fold the omelette in half using a spatula. Let it cook for another minute, then slide it onto a plate.</li>
-                <li><strong>Enjoy:</strong> Serve hot, with additional herbs or seasoning if desired.</li>
-            </ol>
-        </section>
+p {
+    font-family: inherit;
+    color: var(--color-text);
+}
 
-        <hr>
+.prepa {
+    background-color: var(--bg-prepa);
+    padding: 0.625rem;
+    border-radius: 0.625rem;
+    line-height: 1.875rem;
+}
 
-        <section>
-            <h2>Nutrition</h2>
-            <p>The table below shows nutritional values per serving without the additional fillings.</p>
+li {
+    padding-inline-start: 1.25rem;
+}
 
-            <!-- Structure sémantique du tableau avec <th scope="row"> et <td> -->
-            <table>
-                <tr>
-                    <th scope="row">Calories</th>
-                    <td class="colone">277kcal</td>
-                </tr>
-                <tr>
-                    <th scope="row">Carbs</th>
-                    <td class="colone">0g</td>
-                </tr>
-                <tr>
-                    <th scope="row">Protein</th>
-                    <td class="colone">20g</td>
-                </tr>
-                <tr>
-                    <th scope="row">Fat</th>
-                    <td class="colone">22g</td>
-                </tr>
-            </table>
-        </section>
+ol, ul {
+    line-height: 1.875rem;
+    font-size: 0.9375rem;
+    color: var(--color-text);
+}
 
-    </main>
+.colone {
+    padding-inline-start: clamp(2rem, 15vw, 11.25rem);
+    color: var(--color-primary);
+    font-weight: bold;
+}
 
-</body>
-</html>
+th, td {
+    line-height: 2.5rem;
+    font-size: 0.9375rem;
+    text-align: left;
+}
