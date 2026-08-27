@@ -1,13 +1,11 @@
 :root {
-    /* Palette de couleurs (variables CSS) */
+    /* Variables CSS personnalisées */
     --bg-main: rgb(241, 225, 204);
     --bg-card: #ffffff;
     --bg-prepa: rgb(251, 235, 244);
     --color-text: rgb(87, 85, 85);
     --color-primary: rgb(116, 60, 4);
     --color-secondary: rgb(106, 36, 76);
-
-    /* Typographie */
     --font-family-main: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -41,14 +39,13 @@ h1 {
 }
 
 h2 {
-    font-size: 2.1875rem;
+    font-size: clamp(1.5rem, 3vw, 2.1875rem);
     color: var(--color-primary);
 }
 
-h3 {
+.prepa h2 {
     color: var(--color-secondary);
-    font-size: 1.25rem;
-    padding-inline-start: 1.5625rem;
+    font-size: clamp(1.125rem, 2vw, 1.25rem);
 }
 
 p {
@@ -61,10 +58,6 @@ p {
     padding: 0.625rem;
     border-radius: 0.625rem;
     line-height: 1.875rem;
-}
-
-.except {
-    color: var(--color-primary);
 }
 
 li {
@@ -80,9 +73,11 @@ ol, ul {
 .colone {
     padding-inline-start: clamp(2rem, 15vw, 11.25rem);
     color: var(--color-primary);
+    font-weight: bold;
 }
 
 th, td {
     line-height: 2.5rem;
     font-size: 0.9375rem;
+    text-align: left;
 }
