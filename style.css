@@ -43,6 +43,9 @@ p{
     border-radius: 10px;
     line-height: 30px;
 }
+.except{
+        color: rgb(116, 60, 4);
+        }
 li{
     padding-left: 20px;
 }
