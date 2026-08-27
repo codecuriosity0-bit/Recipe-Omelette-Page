@@ -1,0 +1,61 @@
+body{
+    background-color: rgb(241, 225, 204);
+    height: 100vh;
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.contener{
+    width: 50%;
+    background-color: white;
+    display: block;
+    margin: 0 auto;
+    padding: 50px;
+    border-radius: 20px;
+    margin-top: 150px;
+    margin-bottom: 200px;
+}
+.recipe-img{
+    width: 95%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+h1{
+    font-size: 50px;
+}
+h3{
+    color:rgb(106, 36, 76) ;
+    font-size: 20px;
+    padding-left: 25px;
+}
+h2{
+    font-size: 35px;
+    color: rgb(116, 60, 4);
+}
+p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(87, 85, 85);
+}
+.prepa{
+    background-color: rgb(251, 235, 244);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px;
+    border-radius: 10px;
+    line-height: 30px;
+}
+li{
+    padding-left: 20px;
+}
+ol,ul{
+    line-height: 30px;
+    font-size: 15px;
+    color: rgb(87, 85, 85);
+}
+.colone{
+    padding-left: 180px;
+    color: rgb(116, 60, 4);
+}
+th{
+    line-height: 40px;
+    font-size: 15px;
+}
