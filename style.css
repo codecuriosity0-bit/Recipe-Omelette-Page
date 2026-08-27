@@ -1,18 +1,31 @@
+:root {
+    /* Palette de couleurs (variables CSS) */
+    --bg-main: rgb(241, 225, 204);
+    --bg-card: #ffffff;
+    --bg-prepa: rgb(251, 235, 244);
+    --color-text: rgb(87, 85, 85);
+    --color-primary: rgb(116, 60, 4);
+    --color-secondary: rgb(106, 36, 76);
+
+    /* Typographie */
+    --font-family-main: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 body {
-    background-color: rgb(241, 225, 204);
+    background-color: var(--bg-main);
     min-height: 100vh;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: var(--font-family-main);
 }
 
 .contener {
-    width: min(90%, 45rem); /* S'adapte sur mobile et bloque à une largeur max sur grand écran */
-    background-color: white;
+    width: min(90%, 45rem);
+    background-color: var(--bg-card);
     display: block;
-    margin-inline: auto; /* Remplace margin: 0 auto */
-    padding: clamp(1.5rem, 5vw, 3.125rem); /* Padding fluide entre 24px et 50px */
+    margin-inline: auto;
+    padding: clamp(1.5rem, 5vw, 3.125rem);
     border-radius: 1.25rem;
-    margin-block-start: clamp(2rem, 10vw, 9.375rem); /* Marge haut adaptative */
-    margin-block-end: clamp(2rem, 12vw, 12.5rem); /* Marge bas adaptative */
+    margin-block-start: clamp(2rem, 10vw, 9.375rem);
+    margin-block-end: clamp(2rem, 12vw, 12.5rem);
 }
 
 .recipe-img {
@@ -28,30 +41,30 @@ h1 {
 }
 
 h2 {
-    font-size: 2.1875rem; /* 35px -> rem */
-    color: rgb(116, 60, 4);
+    font-size: 2.1875rem;
+    color: var(--color-primary);
 }
 
 h3 {
-    color: rgb(106, 36, 76);
+    color: var(--color-secondary);
     font-size: 1.25rem;
-    padding-inline-start: 1.5625rem; /* Propriété logique pour padding-left */
+    padding-inline-start: 1.5625rem;
 }
 
 p {
-    font-family: inherit; /* Hérite de la police du body */
-    color: rgb(87, 85, 85);
+    font-family: inherit;
+    color: var(--color-text);
 }
 
 .prepa {
-    background-color: rgb(251, 235, 244);
+    background-color: var(--bg-prepa);
     padding: 0.625rem;
     border-radius: 0.625rem;
     line-height: 1.875rem;
 }
 
 .except {
-    color: rgb(116, 60, 4);
+    color: var(--color-primary);
 }
 
 li {
@@ -61,12 +74,12 @@ li {
 ol, ul {
     line-height: 1.875rem;
     font-size: 0.9375rem;
-    color: rgb(87, 85, 85);
+    color: var(--color-text);
 }
 
 .colone {
     padding-inline-start: clamp(2rem, 15vw, 11.25rem);
-    color: rgb(116, 60, 4);
+    color: var(--color-primary);
 }
 
 th, td {
