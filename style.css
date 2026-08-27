@@ -1,64 +1,75 @@
-body{
+body {
     background-color: rgb(241, 225, 204);
-    height: 100vh;
-    justify-content: center;
+    min-height: 100vh;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-.contener{
-    width: 50%;
+
+.contener {
+    width: min(90%, 45rem); /* S'adapte sur mobile et bloque à une largeur max sur grand écran */
     background-color: white;
     display: block;
-    margin: 0 auto;
-    padding: 50px;
-    border-radius: 20px;
-    margin-top: 150px;
-    margin-bottom: 200px;
+    margin-inline: auto; /* Remplace margin: 0 auto */
+    padding: clamp(1.5rem, 5vw, 3.125rem); /* Padding fluide entre 24px et 50px */
+    border-radius: 1.25rem;
+    margin-block-start: clamp(2rem, 10vw, 9.375rem); /* Marge haut adaptative */
+    margin-block-end: clamp(2rem, 12vw, 12.5rem); /* Marge bas adaptative */
 }
-.recipe-img{
-    width: 95%;
+
+.recipe-img {
+    width: 100%;
+    height: auto;
     display: block;
-    margin: 0 auto;
-    border-radius: 20px;
+    margin-inline: auto;
+    border-radius: 1.25rem;
 }
-h1{
-    font-size: 50px;
+
+h1 {
+    font-size: clamp(2rem, 4vw, 3.125rem);
 }
-h3{
-    color:rgb(106, 36, 76) ;
-    font-size: 20px;
-    padding-left: 25px;
-}
-h2{
-    font-size: 35px;
+
+h2 {
+    font-size: 2.1875rem; /* 35px -> rem */
     color: rgb(116, 60, 4);
 }
-p{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+h3 {
+    color: rgb(106, 36, 76);
+    font-size: 1.25rem;
+    padding-inline-start: 1.5625rem; /* Propriété logique pour padding-left */
+}
+
+p {
+    font-family: inherit; /* Hérite de la police du body */
     color: rgb(87, 85, 85);
 }
-.prepa{
+
+.prepa {
     background-color: rgb(251, 235, 244);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding: 10px;
-    border-radius: 10px;
-    line-height: 30px;
+    padding: 0.625rem;
+    border-radius: 0.625rem;
+    line-height: 1.875rem;
 }
-.except{
-        color: rgb(116, 60, 4);
-        }
-li{
-    padding-left: 20px;
-}
-ol,ul{
-    line-height: 30px;
-    font-size: 15px;
-    color: rgb(87, 85, 85);
-}
-.colone{
-    padding-left: 180px;
+
+.except {
     color: rgb(116, 60, 4);
 }
-th{
-    line-height: 40px;
-    font-size: 15px;
+
+li {
+    padding-inline-start: 1.25rem;
+}
+
+ol, ul {
+    line-height: 1.875rem;
+    font-size: 0.9375rem;
+    color: rgb(87, 85, 85);
+}
+
+.colone {
+    padding-inline-start: clamp(2rem, 15vw, 11.25rem);
+    color: rgb(116, 60, 4);
+}
+
+th, td {
+    line-height: 2.5rem;
+    font-size: 0.9375rem;
 }
