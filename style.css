@@ -1,16 +1,14 @@
 :root {
-    /* Variables CSS personnalisées */
     --bg-main: rgb(241, 225, 204);
     --bg-card: #ffffff;
     --bg-prepa: rgb(251, 235, 244);
     --color-text: rgb(87, 85, 85);
     --color-primary: rgb(116, 60, 4);
     --color-secondary: rgb(106, 36, 76);
-    --color-border: #e3e3e3; /* Ajout pour corriger la variable CSS manquante */
+    --color-border: #e3e3e3;
     --font-family-main: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-/* Reset de base */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -39,7 +37,7 @@ body {
     height: auto;
     display: block;
     border-radius: 0.75rem;
-    margin-block-end: clamp(1.5rem, 3vw, 2rem); /* Propriété logique + clamp */
+    margin-block-end: clamp(1.5rem, 3vw, 2rem);
 }
 
 h1 {
@@ -62,7 +60,7 @@ h2 {
 
 .prepa h2 {
     color: var(--color-secondary);
-    font-size: 1.25rem;
+    font-size: clamp(1.125rem, 2vw, 1.25rem);
     margin-block-start: 0;
     margin-block-end: 0.75rem;
 }
@@ -90,7 +88,6 @@ hr {
     margin-block: clamp(1.5rem, 3vw, 2rem);
 }
 
-/* Styles du tableau de nutrition */
 table {
     width: 100%;
     border-collapse: collapse;
