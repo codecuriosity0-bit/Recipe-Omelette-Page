@@ -9,75 +9,115 @@
     --font-family-main: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+/* Reset de base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: var(--bg-main);
     min-height: 100vh;
     font-family: var(--font-family-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contener {
-    width: min(90%, 45rem);
+    width: min(100%, 45rem);
     background-color: var(--bg-card);
-    display: block;
-    margin-inline: auto;
-    padding: clamp(1.5rem, 5vw, 3.125rem);
+    padding: clamp(1.5rem, 5vw, 2.5rem);
     border-radius: 1.25rem;
-    margin-block-start: clamp(2rem, 10vw, 9.375rem);
-    margin-block-end: clamp(2rem, 12vw, 12.5rem);
+    margin-block: clamp(2rem, 5vw, 5rem);
 }
 
 .recipe-img {
     width: 100%;
     height: auto;
     display: block;
-    margin-inline: auto;
-    border-radius: 1.25rem;
+    border-radius: 0.75rem;
+    margin-bottom: 2rem;
 }
 
 h1 {
-    font-size: clamp(2rem, 4vw, 3.125rem);
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    margin-bottom: 1.25rem;
 }
 
 h2 {
-    font-size: clamp(1.5rem, 3vw, 2.1875rem);
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
     color: var(--color-primary);
+    margin-block: 1.5rem 1rem;
+}
+
+/* Utilisation de clamp() pour le padding afin de corriger le warning CSS */
+.prepa {
+    background-color: var(--bg-prepa);
+    padding: clamp(1rem, 3vw, 1.5rem);
+    border-radius: 0.75rem;
+    margin-block: 2rem;
 }
 
 .prepa h2 {
     color: var(--color-secondary);
-    font-size: clamp(1.125rem, 2vw, 1.25rem);
+    font-size: 1.25rem;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
 }
 
 p {
-    font-family: inherit;
     color: var(--color-text);
-}
-
-.prepa {
-    background-color: var(--bg-prepa);
-    padding: 0.625rem;
-    border-radius: 0.625rem;
-    line-height: 1.875rem;
-}
-
-li {
-    padding-inline-start: 1.25rem;
+    line-height: 1.6;
 }
 
 ol, ul {
-    line-height: 1.875rem;
+    line-height: 1.8;
     font-size: 0.9375rem;
+    color: var(--color-text);
+    padding-left: 1.5rem;
+}
+
+li {
+    padding-left: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #e3e3e3;
+    margin-block: 2rem;
+}
+
+/* Styles du tableau de nutrition */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+tr {
+    border-bottom: 1px solid #e3e3e3;
+}
+
+tr:last-child {
+    border-bottom: none;
+}
+
+th, td {
+    padding-block: 0.75rem;
+    font-size: 0.9375rem;
+    text-align: left;
+}
+
+th {
+    font-weight: normal;
     color: var(--color-text);
 }
 
 .colone {
-    padding-inline-start: clamp(2rem, 15vw, 11.25rem);
     color: var(--color-primary);
     font-weight: bold;
-}
-
-th, td {
-    line-height: 2.5rem;
-    font-size: 0.9375rem;
-    text-align: left;
+    text-align: right;
 }
