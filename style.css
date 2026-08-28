@@ -1,120 +1,125 @@
 :root {
-    --bg-main: rgb(241, 225, 204);
-    --bg-card: #ffffff;
-    --bg-prepa: rgb(251, 235, 244);
-    --color-text: rgb(87, 85, 85);
-    --color-primary: rgb(116, 60, 4);
-    --color-secondary: rgb(106, 36, 76);
-    --color-border: #e3e3e3;
-    --font-family-main: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  --bg-main: rgb(241, 225, 204);
+  --bg-card: #ffffff;
+  --bg-prepa: rgb(251, 235, 244);
+  --color-text: rgb(87, 85, 85);
+  --color-primary: rgb(116, 60, 4);
+  --color-secondary: rgb(106, 36, 76);
+  --color-border: #e3e3e3;
+  --font-family-main: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: var(--bg-main);
-    min-height: 100vh;
-    font-family: var(--font-family-main);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: var(--bg-main);
+  min-height: 100vh;
+  font-family: var(--font-family-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contener {
-    width: min(100%, 45rem);
-    background-color: var(--bg-card);
-    padding: clamp(1.5rem, 5vw, 2.5rem);
-    border-radius: 1.25rem;
-    margin-block: clamp(2rem, 5vw, 5rem);
+  width: min(100%, 45rem);
+  background-color: var(--bg-card);
+  padding: clamp(1.5rem, 5vw, 2.5rem);
+  border-radius: 1.25rem;
+  margin-top: clamp(2rem, 5vw, 5rem);
+  margin-bottom: clamp(2rem, 5vw, 5rem);
 }
 
 .recipe-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 0.75rem;
-    margin-block-end: clamp(1.5rem, 3vw, 2rem);
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.75rem;
+  margin-bottom: clamp(1.5rem, 3vw, 2rem);
 }
 
 h1 {
-    font-size: clamp(2rem, 4vw, 2.5rem);
-    margin-block-end: clamp(1rem, 2vw, 1.25rem);
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  margin-bottom: clamp(1rem, 2vw, 1.25rem);
 }
 
 h2 {
-    font-size: clamp(1.25rem, 3vw, 1.75rem);
-    color: var(--color-primary);
-    margin-block: clamp(1.25rem, 3vw, 1.5rem) clamp(0.75rem, 2vw, 1rem);
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  color: var(--color-primary);
+  margin-top: clamp(1.25rem, 3vw, 1.5rem);
+  margin-bottom: clamp(0.75rem, 2vw, 1rem);
 }
 
 .prepa {
-    background-color: var(--bg-prepa);
-    padding: clamp(1rem, 3vw, 1.5rem);
-    border-radius: 0.75rem;
-    margin-block: clamp(1.5rem, 3vw, 2rem);
+  background-color: var(--bg-prepa);
+  padding: clamp(1rem, 3vw, 1.5rem);
+  border-radius: 0.75rem;
+  margin-top: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: clamp(1.5rem, 3vw, 2rem);
 }
 
 .prepa h2 {
-    color: var(--color-secondary);
-    font-size: clamp(1.125rem, 2vw, 1.25rem);
-    margin-block-start: 0;
-    margin-block-end: 0.75rem;
+  color: var(--color-secondary);
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  margin-top: 0;
+  margin-bottom: 0.75rem;
 }
 
 p {
-    color: var(--color-text);
-    line-height: 1.6;
+  color: var(--color-text);
+  line-height: 1.6;
 }
 
 ol, ul {
-    line-height: 1.8;
-    font-size: 0.9375rem;
-    color: var(--color-text);
-    padding-inline-start: 1.5rem;
+  line-height: 1.8;
+  font-size: 0.9375rem;
+  color: var(--color-text);
+  padding-left: 1.5rem;
 }
 
 li {
-    padding-inline-start: 0.5rem;
-    margin-block-end: 0.5rem;
+  padding-left: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 hr {
-    border: none;
-    border-top: 1px solid var(--color-border);
-    margin-block: clamp(1.5rem, 3vw, 2rem);
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin-top: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: clamp(1.5rem, 3vw, 2rem);
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-block-start: 1rem;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
 }
 
 tr {
-    border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
 }
 
 tr:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 th, td {
-    padding-block: 0.75rem;
-    font-size: 0.9375rem;
-    text-align: left;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-size: 0.9375rem;
+  text-align: left;
 }
 
 th {
-    font-weight: normal;
-    color: var(--color-text);
+  font-weight: normal;
+  color: var(--color-text);
 }
 
 .colone {
-    color: var(--color-primary);
-    font-weight: bold;
-    text-align: right;
+  color: var(--color-primary);
+  font-weight: bold;
+  text-align: right;
 }
