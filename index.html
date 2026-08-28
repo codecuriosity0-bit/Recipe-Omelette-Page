@@ -8,12 +8,11 @@
 </head>
 <body>
 
-  <!-- Balise sémantique <main> pour résoudre l'erreur de Landmark -->
+  <!-- Balise sémantique <main> indispensable pour l'accessibilité (Landmarks) -->
   <main class="contener">
     
     <img class="recipe-img" src="image-omelette.jpeg" alt="A delicious cooked omelette served on a plate">
     
-    <!-- Titre H1 principal -->
     <h1>Simple Omelette Recipe</h1>
     
     <p>
@@ -75,22 +74,22 @@
       The table below shows nutritional values per serving without the additional fillings.
     </p>
 
-    <!-- Tableau sémantiquement correct : <td> pour les valeurs -->
+    <!-- Tableau avec l'attribut scope="row" sur <th> et la balise <td> pour les données -->
     <table>
       <tr>
-        <th>Calories</th>
+        <th scope="row">Calories</th>
         <td class="colone">277kcal</td>
       </tr>      
       <tr>
-        <th>Carbs</th>
+        <th scope="row">Carbs</th>
         <td class="colone">0g</td>
       </tr>
       <tr>
-        <th>Protein</th>
+        <th scope="row">Protein</th>
         <td class="colone">20g</td>
       </tr>
       <tr>
-        <th>Fat</th>
+        <th scope="row">Fat</th>
         <td class="colone">22g</td>
       </tr>
     </table>
